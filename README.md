@@ -12,9 +12,4 @@ Welcome to the Spinnacle Laundry Service Application repository! This project is
 
 ## Installation
 
-Clone this repository to get started with the Spinnacle Laundry Service Application. You will need a web server environment (e.g., Apache, Nginx) to run this application. Follow the steps below to set up the project on your local machine:
-
-```bash
-git clone https://github.com/yourusername/LBYCPG2_Project.git
-cd LBYCPG2_Project
-# Serve the application using a web server of your choice
+wala pa
