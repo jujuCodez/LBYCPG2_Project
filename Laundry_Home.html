@@ -5,72 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spinnacle Laundry Services</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        header, footer {
-            background-color: #007bff;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px 0;
-        }
-        .container {
-            max-width: 600px; /* Adjusted width */
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            background: #ffffff;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
-        input[type="text"],
-        input[type="number"],
-        select {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0 20px;
-            border: 2px solid #ddd;
-            border-radius: 5px; /* Rounded edges */
-            box-sizing: border-box; /* Ensure padding doesn't increase width */
-        }
-        .service-section {
-            background-color: #f0f0f0;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-        button {
-            background-color: #28a745;
-            color: #ffffff;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            display: block;
-            width: 100%;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        h2, h3, h4 {
-            color: #0056b3;
-        }
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-                padding: 10px;
-            }
-        }
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			background-color: #121212; /* Darker background */
+			margin: 0;
+			padding: 0;
+			color: #e0e0e0; /* Lighter text */
+		}
+		header, footer {
+			background-color: #283F5A; /* Slightly darker blue for contrast */
+			color: #ffffff;
+			text-align: center;
+			padding: 20px 0;
+		}
+		.container {
+			max-width: 600px; /* Adjusted width */
+			margin: auto;
+			overflow: hidden;
+			padding: 20px;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* More pronounced shadow for depth */
+			background: #242424; /* Darker container background */
+		}
+		.form-group {
+			margin-bottom: 20px;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+			color: #c7c7c7; /* Lighter text for better readability */
+		}
+		input[type="text"],
+		input[type="number"],
+		select {
+			width: 100%;
+			padding: 10px;
+			margin: 5px 0 20px;
+			border: 2px solid #555; /* Darker borders */
+			background: #333; /* Darker input background */
+			color: #fff; /* Light text */
+			border-radius: 5px;
+			box-sizing: border-box;
+		}
+		.service-section {
+			background-color: #1e1e1e; /* Darker section background */
+			padding: 20px;
+			margin: 20px 0;
+			border-radius: 5px;
+		}
+		button {
+			background-color: #218838; /* Darker green */
+			color: #ffffff;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			display: block;
+			width: 100%;
+		}
+		button:hover {
+			background-color: #1c7430; /* Even darker green on hover */
+		}
+		h2, h3, h4 {
+			color: #4da3ff; /* Lighter blue for contrast against dark background */
+		}
+		@media (max-width: 768px) {
+			.container {
+				width: 90%;
+				padding: 10px;
+			}
+		}
+				/* Style labels with 'btn-label' class to look like buttons */
+		.btn-label {
+			display: inline-block;
+			background-color: #79938b ;
+			color: white;
+			padding: 10px 20px;
+			font-family: sans-serif;
+			border-radius: 5px;
+			cursor: pointer;
+			margin: 5px 0px; /* Spacing between buttons */
+			box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+			transition: background-color 0.3s ease;
+		}
+
+		/* Change label appearance when its corresponding input is checked */
+		input[type="radio"]:checked + .btn-label {
+			background-color:  #1a9e77 ;
+			color: #ffffff;
+		}
+
+		/* Optional: change appearance on hover */
+		.btn-label:hover {
+			background-color: #1e7e34;
+		}
+				input[type="radio"] {
+			display: none;
+		}
     </style>
 </head>
 <body>
@@ -98,22 +128,23 @@
                 </select>
             </div>
 
-            <div class="service-section">
-                <h2>WASHING SERVICES</h2>
-                <h4>Select your preferred type of service</h4>
-                <input type="radio" id="fullServ" name="typeServ" value="Full Service" required>
-                <label for="fullServ">Full Service</label>
-                <input type="radio" id="selfServ" name="typeServ" value="Self Service">
-                <label for="selfServ">Self Service</label>
+			<div class="service-section">
+				<h2>WASHING SERVICES</h2>
+				<h4>Select your preferred type of service</h4>
+				<input type="radio" id="fullServ" name="typeServ" value="Full Service" required>
+				<label class="btn-label" for="fullServ">Full Service</label>
+				<input type="radio" id="selfServ" name="typeServ" value="Self Service">
+				<label class="btn-label" for="selfServ">Self Service</label>
 
-                <h4>Select your preferred type of wash</h4>
-                <input type="radio" id="regWash" name="typeWash" value="Regular Wash" required>
-                <label for="regWash">Regular Wash</label>
-                <input type="radio" id="supWash" name="typeWash" value="Super Wash">
-                <label for="supWash">Super Wash</label>
-                <input type="radio" id="premWash" name="typeWash" value="Premium Wash">
-                <label for="premWash">Premium Wash</label>
-            </div>
+				<h4>Select your preferred type of wash</h4>
+				<input type="radio" id="regWash" name="typeWash" value="Regular Wash" required>
+				<label class="btn-label" for="regWash">Regular Wash</label>
+				<input type="radio" id="supWash" name="typeWash" value="Super Wash">
+				<label class="btn-label" for="supWash">Super Wash</label>
+				<input type="radio" id="premWash" name="typeWash" value="Premium Wash">
+				<label class="btn-label" for="premWash">Premium Wash</label>
+			</div>
+
 
             <div class="service-section">
                 <h2>Detergent</h2>
@@ -191,6 +222,41 @@
                     <input type="text" id="amt" name="amt">
                 </div>
             </div>
+			
+			<div class="service-section">
+				<h2> BAGS </h2>
+				<label for="sBag">(SMALL)</label>
+				<input type="number" id="sBag" name="sBag"> <label> pcs </label><br>
+				<label for="mBag">(MEDIUM)</label>
+				<input type="number" id="mBag" name="mBag"> <label> pcs </label><br>
+				<label for="lBag">(LARGE)</label>
+				<input type="number" id="lBag" name="lBag"> <label> pcs </label><br> 
+				<label for="xlBag">(EXTRA LARGE)</label>
+				<input type="number" id="xlBag" name="xlBag"> <label> pcs </label><br>
+			</div>
+			<div class="service-section">
+				<h2> DRY CLEANING </h2>
+				<label for="coatsDC">COATS, JACKET, BAG</label>
+				<input type="number" id="coatsDC" name="coatsDC"> <label> pcs </label><br>
+				<label for="dressDC">DRESS, GOWN, BLOUSE</label>
+				<input type="number" id="dressDC" name="dressDC"> <label> pcs </label><br>
+				<label for="stuffTDC">STUFFED TOYS</label>
+				<input type="number" id="stuffTDC" name="stuffTDC"> <label> pcs </label><br>
+				<label for="slacksDC">SLACKS, PANTS</label>
+				<input type="number" id="slacksDC" name="slacksDC"> <label> pcs </label><br>
+				<label for="helmetDC">HELMETS, GLOVES</label>
+				<input type="number" id="helmetDC" name="helmetDC"> <label> pcs </label><br>
+			</div>
+
+			<div class="service-section">
+				<h2> SHOE CLEANING</h2>
+				<select name="shoeClean" id="shoeClean">
+					<option value="reg">Reg</option>
+					<option value="deo">Deo</option>
+					<option value="repel">Repel</option>
+				</select>
+				<input type="number" id="shoePair" name="shoePair"> <label> pairs </label><br>
+			</div>
 
             <button type="submit">Submit</button>
         </form>
