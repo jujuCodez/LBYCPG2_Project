@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinnacle Laundry Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #004d99;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .service-section {
+            background-color: #e7e7e7;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #0056b3;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #003d66;
+        }
+        h2, h3, h4 {
+            color: #333;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Spinnacle Laundry</h1>
+    </header>
+
+    <div class="container">
+        <form id="laundryForm">
+            <div class="form-group">
+                <label for="cusName">Name:</label>
+                <input type="text" id="cusName" name="cusName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="paymentMode">Mode of Payment:</label>
+                <select name="paymentMode" id="paymentMode" required>
+                    <option value="cash">Cash</option>
+                    <option value="Gcash">Gcash</option>
+                    <option value="Maya">PayMaya</option>
+                </select>
+            </div>
+
+            <div class="service-section">
+                <h2>WASHING SERVICES</h2>
+                <h4>Select your preferred type of service</h4>
+                <input type="radio" id="fullServ" name="typeServ" value="Full Service" required>
+                <label for="fullServ">Full Service</label>
+                <input type="radio" id="selfServ" name="typeServ" value="Self Service">
+                <label for="selfServ">Self Service</label>
+
+                <h4>Select your preferred type of wash</h4>
+                <input type="radio" id="regWash" name="typeWash" value="Regular Wash" required>
+                <label for="regWash">Regular Wash</label>
+                <input type="radio" id="supWash" name="typeWash" value="Super Wash">
+                <label for="supWash">Super Wash</label>
+                <input type="radio" id="premWash" name="typeWash" value="Premium Wash">
+                <label for="premWash">Premium Wash</label>
+            </div>
+
+            <div class="service-section">
+                <h2>Detergent</h2>
+                <div class="form-group">
+                    <label for="detQuan">Quantity:</label>
+                    <input type="number" id="detQuan" name="detQuan" min="1">
+                </div>
+                <div class="form-group">
+                    <label for="detType">Type of Detergent:</label>
+                    <select name="detType" id="detType">
+                        <option value="downy">Downy</option>
+                        <option value="ariel">Ariel</option>
+                        <option value="tide">Tide</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class
+            ="service-section">
+                <h2>Fabcon</h2>
+                <div class="form-group">
+                    <label for="fabQuan">Quantity:</label>
+                    <input type="number" id="fabQuan" name="fabQuan" min="1">
+                </div>
+                <div class="form-group">
+                    <label for="fabType">Type of Fabric Conditioner:</label>
+                    <select name="fabType" id="fabType">
+                        <option value="downy">Downy</option>
+                        <option value="comfort">Comfort</option>
+                        <option value="snuggle">Snuggle</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="service-section">
+                <h2>EXTRAS</h2>
+                <div class="form-group">
+                    <label for="iron">Iron (kg):</label>
+                    <input type="number" id="iron" name="iron" min="1">
+                </div>
+                <div class="form-group">
+                    <label for="stain">Stain Removal (pcs):</label>
+                    <input type="number" id="stain" name="stain" min="1">
+                </div>
+            </div>
+
+            <div class="service-section">
+                <h2>HANDWASH</h2>
+                <div class="form-group">
+                    <label for="clothes">Clothes & Jeans (kg):</label>
+                    <input type="number" id="clothes" name="clothes" min="1">
+                </div>
+                <div class="form-group">
+                    <label for="curtain">Curtains, Beddings (kg):</label>
+                    <input type="number" id="curtain" name="curtain" min="1">
+                </div>
+            </div>
+
+            <div class="service-section">
+                <h2>DRY CLEANING</h2>
+                <div class="form-group">
+                    <label for="coatsDC">Coats, Jacket, Bag (pcs):</label>
+                    <input type="number" id="coatsDC" name="coatsDC" min="1">
+                </div>
+            </div>
+
+            <div class="service-section">
+                <h2>Custom Requests</h2>
+                <div class="form-group">
+                    <label for="service">Service Description:</label>
+                    <input type="text" id="service" name="service">
+                </div>
+                <div class="form-group">
+                    <label for="amt">Amount:</label>
+                    <input type="text" id="amt" name="amt">
+                </div>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Spinnacle Laundry. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('laundryForm').onsubmit = function(e) {
+            e.preventDefault();
+            // Implement the form submission logic here
+            alert("Thank you for submitting your laundry request!");
+        };
+    </script>
+</body>
+</html>
