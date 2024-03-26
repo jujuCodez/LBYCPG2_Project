@@ -6,63 +6,69 @@
     <title>Spinnacle Laundry Services</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
+            color: #333;
         }
         header, footer {
-            background-color: #004d99;
+            background-color: #007bff;
             color: #ffffff;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 0;
         }
         .container {
-            width: 80%;
+            max-width: 600px; /* Adjusted width */
             margin: auto;
             overflow: hidden;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: #ffffff;
         }
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
         input[type="text"],
         input[type="number"],
         select {
             width: 100%;
-            padding: 8px;
-            margin: 5px 0 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: 2px solid #ddd;
+            border-radius: 5px; /* Rounded edges */
+            box-sizing: border-box; /* Ensure padding doesn't increase width */
         }
         .service-section {
-            background-color: #e7e7e7;
+            background-color: #f0f0f0;
             padding: 20px;
             margin: 20px 0;
+            border-radius: 5px;
         }
         button {
-            background-color: #0056b3;
+            background-color: #28a745;
             color: #ffffff;
-            padding: 10px 20px;
+            padding: 12px 20px;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
             display: block;
             width: 100%;
-            margin-top: 20px;
         }
         button:hover {
-            background-color: #003d66;
+            background-color: #218838;
         }
         h2, h3, h4 {
-            color: #333;
+            color: #0056b3;
         }
         @media (max-width: 768px) {
             .container {
-                width: 95%;
+                width: 90%;
+                padding: 10px;
             }
         }
     </style>
@@ -71,7 +77,6 @@
     <header>
         <h1>Spinnacle Laundry</h1>
     </header>
-
     <div class="container">
         <form id="laundryForm">
             <div class="form-group">
@@ -190,12 +195,10 @@
             <button type="submit">Submit</button>
         </form>
     </div>
-
     <footer>
         <p>&copy; 2024 Spinnacle Laundry. All rights reserved.</p>
     </footer>
-
-    <script>
+        <script>
         document.getElementById('laundryForm').onsubmit = function(e) {
             e.preventDefault();
             // Implement the form submission logic here
