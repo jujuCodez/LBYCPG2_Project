@@ -101,6 +101,27 @@
 				input[type="radio"] {
 			display: none;
 		}
+		.admin-login {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000; /* Ensure the button is above other content */
+}
+
+.admin-login button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-login button:hover {
+    background-color: #45a049;
+}
+		
+		
     </style>
 </head>
 <body>
@@ -271,5 +292,9 @@
             alert("Thank you for submitting your laundry request!");
         };
     </script>
+	<div class="admin-login">
+    <button onclick="location.href='admin/login.html'">Admin Login</button>
+</div>
+
 </body>
 </html>
